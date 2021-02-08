@@ -30,6 +30,7 @@ import {
 
 
 import css from './EntitiesCheckbox.scss'
+import { ENABLE_COMPREHEND_MEDICAL } from '../../constants/configs'
 
 export default function EntitiesCheckbox({
   entities,
@@ -60,7 +61,7 @@ export default function EntitiesCheckbox({
   let is_comprehend_medical = false
   
 
-  if (comprehendService == COMPREHEND_MEDICAL_SERVICE)is_comprehend_medical=true
+  if (comprehendService == COMPREHEND_MEDICAL_SERVICE && ENABLE_COMPREHEND_MEDICAL)is_comprehend_medical=true
 
   
   if (!entities.length&& visible) {
